@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+    <link href='..\css\post.css' rel='stylesheet' type='text/css'>
+    <link href='..\css\header.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href='..\css\font.css' rel='stylesheet' type='text/css'>  
+</head>
+
+
+<body>
+        <div class="header">
+                <input id="signUpButtonClick" class="topButtons" type="button" onclick="openSignUpButton()" value="Sign Up">
+                <input id="loginButtonClick" class="topButtons" type="button" onclick="openSignIn()" value="Sign In">
+                <a id="pageTitle" class="logo-title" href="..\index.html">ScriBBler</a>
+                <p class="middleText"></p>
+            </div>
+            <div id="signInModal" class="modal">
+                    <form class="modal-content">
+                        <span onclick="onCloseModalClicked()" class="close_signIn" title="Close Modal">&times;</span>
+                        <div class="container">
+                        <h1>Welcome!</h1>
+                        <hr>
+                        <label for="Username" class="label">
+                            <b>Username</b>
+                        </label>
+                        <input type="text" placeholder="Enter Username" name="Username" required>
+        
+                        <label for="psw" class="label">
+                            <b>Password</b>
+                        </label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <div class="clearfix" class="label">
+                            
+                            <button type="submit" class="signinbtn">Sign In</button>
+                        </div>
+                    </div>
+                    <div id="signUpPrompt" class="signUpForm">Not a user yet?
+                        <span id="" class="signUp" onclick="openSignUp()">Sign Up</span>
+                    </div>
+                </form>
+            </div>
+        
+            <div id="signUpModal" class="modal">
+                <div class="modal-content-sigup">
+                    <span onclick="onCloseModalClicked()" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content-sigUp">
+                        <div class="container-signUp">
+        
+                            <h1>Let's Get Started</h1>
+                            <hr>
+                            <label for="Fullname" class="label">Full Name</label>
+                            <input type="text" placeholder="Enter Full Name" name="Fullname" required>
+                            <label for="Username" class="label">Username</label>
+                            <input type="text" placeholder="Enter Username" name="Username" required>
+                            <label for="psw" class="label">Password</label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            <label for="psw-repeat" class="label">Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+                            <div class="clearfix">
+                                    <button type="submit" class="signupbtn">Sign Up</button>
+                                <button type="button" class="cancelbtn">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+   <div class="blogContent">
+<div id="blogTitle" class="blogTite">
+    <h id="blogTitleNew">Naruto:Shippuden!</h>
+</div>
+<div class="blogAuthor">
+        <button type="button" id="editPostClick" class="editPostButton" onclick="editPost()">Edit <i class="fa fa-edit"></i> </button>
+    <p>Naruto</p>
+</div>
+<div class="blogText">
+    <p id="blogBody">
+        Naruto: Shippuden is an anime series adapted from Part II of Masashi Kishimoto's manga series, with exactly 500 episodes. It is set two and a half years after Part I in the Naruto universe, following the ninja teenager Naruto Uzumaki and his allies. The series is directed by Hayato Date, and produced by Pierrot and TV Tokyo. It began broadcasting on February 15, 2007 on TV Tokyo, and concluded on March 23, 2017.</p>
+</div>
+<div class="likeBlogButton">    
+    <button  id= "likeBlog" onclick="postLiked()">
+      <i class="fa fa-thumbs-up"> Like</i> 
+      
+    </button> 
+    <span id="commentCount">Like this!</span>
+  </div>
+  <div class="commentContainer">      
+    <form class="commentBody"> 
+    <label for="commentContent"></label>
+                    <textarea placeholder="Leave a comment..." id="commentContent" rows="5" cols="80" name="Content"></textarea> <br>
+                    <button type="button" class="newComment" onClick="addComment()">Comment</button>
+    </form>
+    <p class="allCommentsHeading">Comments!</p> 
+    <div class="allCommentsBox" id= "commentBox"> 
+       <div class="contentOfComment">                                          
+                </div>
+            </div>
+        </div>
+        </div>
+    <script src="..\js\post.js" defer></script>
+    <script src="..\js\header.js">              
+    </script>
+</body>
